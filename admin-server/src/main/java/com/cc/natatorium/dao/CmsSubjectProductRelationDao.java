@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.CmsSubjectProductRelation;
+import com.cc.natatorium.model.CmsSubjectProductRelation;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

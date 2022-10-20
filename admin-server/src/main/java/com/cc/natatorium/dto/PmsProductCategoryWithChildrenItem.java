@@ -1,6 +1,6 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.model.PmsProductCategory;
+import com.cc.natatorium.model.PmsProductCategory;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

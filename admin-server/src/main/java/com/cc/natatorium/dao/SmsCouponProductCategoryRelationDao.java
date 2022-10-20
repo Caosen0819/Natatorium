@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.SmsCouponProductCategoryRelation;
+import com.cc.natatorium.model.SmsCouponProductCategoryRelation;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

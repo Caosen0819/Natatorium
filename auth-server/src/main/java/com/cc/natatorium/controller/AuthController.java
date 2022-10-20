@@ -1,8 +1,8 @@
-package com.macro.mall.auth.controller;
+package com.cc.natatorium.controller;
 
-import com.macro.mall.auth.domain.Oauth2TokenDto;
-import com.macro.mall.common.api.CommonResult;
-import com.macro.mall.common.constant.AuthConstant;
+import com.cc.natatorium.api.CommonResult;
+import com.cc.natatorium.constant.AuthConstant;
+import com.cc.natatorium.domain.Oauth2TokenDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -10,7 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.endpoint.TokenEndpoint;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

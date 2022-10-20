@@ -1,8 +1,9 @@
-package cn.myjszl.oauth.server.exception;
+package com.cc.natatorium.exception;
 
-import cn.myjszl.oauth.server.model.ResultCode;
-import cn.myjszl.oauth.server.model.ResultMsg;
-import cn.myjszl.oauth.server.utils.ResponseUtils;
+
+import com.cc.natatorium.model.ResultCode;
+import com.cc.natatorium.model.ResultMsg;
+import com.cc.natatorium.utils.ResponseUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
@@ -11,10 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 /**
- * @author 公众号：码猿技术专栏
- *
- * 当认证后的用户访问受保护的资源时，权限不够，则会进入这个处理器
+ * @Author caosen
+ * @data 2022/10/7--13:15
  */
 @Component
 public class RequestAccessDeniedHandler implements AccessDeniedHandler {

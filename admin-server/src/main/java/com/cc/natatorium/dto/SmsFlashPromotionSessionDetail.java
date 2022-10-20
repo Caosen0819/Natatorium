@@ -1,6 +1,6 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.model.SmsFlashPromotionSession;
+import com.cc.natatorium.model.SmsFlashPromotionSession;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

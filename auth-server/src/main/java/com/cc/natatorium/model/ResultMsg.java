@@ -1,4 +1,4 @@
-package cn.myjszl.oauth.server.model;
+package com.cc.natatorium.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

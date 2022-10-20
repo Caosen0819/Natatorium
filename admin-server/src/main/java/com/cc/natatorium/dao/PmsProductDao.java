@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.dto.PmsProductResult;
+import com.cc.natatorium.dto.PmsProductResult;
 import org.apache.ibatis.annotations.Param;
 
 

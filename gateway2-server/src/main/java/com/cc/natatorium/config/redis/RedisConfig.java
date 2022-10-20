@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.gateway.config.redis;
+package com.cc.natatorium.config.redis;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;

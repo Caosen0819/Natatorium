@@ -1,4 +1,4 @@
-package cn.myjszl.oauth.server.filter;
+package com.cc.natatorium.filter;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -8,7 +8,7 @@ import org.springframework.security.oauth2.provider.client.ClientCredentialsToke
 import org.springframework.security.web.AuthenticationEntryPoint;
 
 /**
- * @author 公众号：码猿技术专栏
+ *
  * 自定义的客户端认证的过滤器，根据客户端的id、秘钥进行认证
  * 重写这个过滤器用于自定义异常处理
  * 具体认证的逻辑依然使用ClientCredentialsTokenEndpointFilter，只是设置一下AuthenticationEntryPoint为定制

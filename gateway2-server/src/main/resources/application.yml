@@ -1,32 +1,38 @@
 server:
-  port: 3001
+  port: 8201
 spring:
   main:
     allow-bean-definition-overriding: true
+    web-application-type: reactive
   application:
-    name: oauth2-cloud-gateway
+    name: gateway-server
   cloud:
     nacos:
       ## 注册中心配置
       discovery:
         # nacos的服务地址，nacos-server中IP地址:端口号
-        server-addr: 127.0.0.1:8848
+        server-addr: localhost:8848
     gateway:
       ## 路由
       routes:
         ## id只要唯一即可，名称任意
-        - id: oauth2-cloud-auth-server
-          uri: lb://oauth2-cloud-auth-server
+        - id: auth-server
+          uri: lb://auth-server
           predicates:
             ## Path Route Predicate Factory断言
             - Path=/oauth/**
-        - id: oauth2-cloud-order
-          uri: lb://oauth2-cloud-order
+#        - id: admin-server
+#          uri: lb://admin-server
+#          predicates:
+#            ## Path Route Predicate Factory断言
+#            - Path=/order/**
+        - id: mall-admin
+          uri: lb://mall-admin
           predicates:
             ## Path Route Predicate Factory断言
-            - Path=/order/**
+            - Path=/mall-admin/**
   redis:
-    host: 127.0.01
+    host: 127.0.0.1
     password:
     port: 6379
     timeout: 15000
@@ -36,6 +42,31 @@ spring:
         max-idle: 300
         max-wait: 15000
         min-idle: 10
+secure:
+  ignore:
+    urls: #配置白名单路径
+      - "/doc.html"
+      - "/swagger-resources/**"
+      - "/swagger/**"
+      - "/*/v2/api-docs"
+      - "/*/*.js"
+      - "/*/*.css"
+      - "/*/*.png"
+      - "/*/*.ico"
+      - "/webjars/**"
+      - "/actuator/**"
+      - "/mall-auth/oauth/token"
+      - "/mall-auth/rsa/publicKey"
+      - "/mall-search/**"
+      - "/mall-portal/sso/login"
+      - "/mall-portal/sso/register"
+      - "/mall-portal/sso/getAuthCode"
+      - "/mall-portal/home/**"
+      - "/mall-portal/product/**"
+      - "/mall-portal/brand/**"
+      - "/mall-admin/admin/login"
+      - "/mall-admin/admin/register"
+      - "/mall-admin/minio/upload"
 oauth2:
   cloud:
     sys:
@@ -43,4 +74,28 @@ oauth2:
         ignoreUrls:
           - /oauth/token
           - /oauth/authorize
+          - /mall-admin/admin/login
+          - /doc.html
+          - /swagger-resources/**
+          - /swagger/**
+          - /*/v2/api-docs
+          - /*/*.js
+          - /*/*.css
+          - /*/*.png
+          - /*/*.ico
+          - /webjars/**
+          - /actuator/**
+          - /mall-auth/oauth/token
+          - /mall-auth/rsa/publicKey
+          - /mall-search/**
+          - /mall-portal/sso/login
+          - /mall-portal/sso/register
+          - /mall-portal/sso/getAuthCode
+          - /mall-portal/home/**
+          - /mall-portal/product/**
+          - /mall-portal/brand/**
+          - /mall-admin/admin/login
+          - /mall-admin/admin/register
+          - /mall-admin/minio/upload
+#          - /mall-admin/**
 

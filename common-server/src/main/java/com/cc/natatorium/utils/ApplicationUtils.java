@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.auth.common.utils;
+package com.cc.natatorium.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

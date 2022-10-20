@@ -1,4 +1,4 @@
-package com.macro.mall.common.api;
+package com.cc.natatorium.api;
 
 /**
  * 封装API的错误码

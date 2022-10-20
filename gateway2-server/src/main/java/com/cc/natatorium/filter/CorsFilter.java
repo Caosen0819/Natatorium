@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.gateway.filter;
+package com.cc.natatorium.filter;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

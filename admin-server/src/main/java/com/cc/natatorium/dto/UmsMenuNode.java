@@ -1,6 +1,6 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.model.UmsMenu;
+import com.cc.natatorium.model.UmsMenu;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

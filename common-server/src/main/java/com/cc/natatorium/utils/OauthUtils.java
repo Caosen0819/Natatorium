@@ -1,17 +1,10 @@
-package cn.myjszl.oauth2.cloud.auth.common.utils;
+package com.cc.natatorium.utils;
 
-import cn.myjszl.oauth2.cloud.auth.common.model.LoginVal;
-import cn.myjszl.oauth2.cloud.auth.common.model.RequestConstant;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import javax.servlet.http.*;
 
-import java.util.Objects;
+import com.cc.natatorium.model.LoginVal;
+import com.cc.natatorium.model.RequestConstant;
 
-/**
- * @author  公众号：码猿技术专栏
- * OAuth2.0工具类，从请求的线程中获取个人信息
- */
+
 public class OauthUtils {
 
     /**

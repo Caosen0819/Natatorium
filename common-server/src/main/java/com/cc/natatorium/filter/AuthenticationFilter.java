@@ -1,13 +1,13 @@
-package cn.myjszl.oauth2.cloud.auth.common.security.filter;
+package com.cc.natatorium.filter;
 
 import cn.hutool.core.codec.Base64;
 import cn.hutool.core.util.StrUtil;
-import cn.myjszl.oauth2.cloud.auth.common.model.LoginVal;
-import cn.myjszl.oauth2.cloud.auth.common.model.RequestConstant;
-import cn.myjszl.oauth2.cloud.auth.common.model.TokenConstant;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.cc.natatorium.model.LoginVal;
+import com.cc.natatorium.model.RequestConstant;
+import com.cc.natatorium.model.TokenConstant;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -17,10 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author 公众号：码猿技术专栏
- * 微服务过滤器，解密网关传递的用户信息，将其放入request中，便于后期业务方法直接获取用户信息
- */
+
 @Component
 public class AuthenticationFilter extends OncePerRequestFilter {
     /**

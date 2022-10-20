@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.auth.server.model.po;
+package com.cc.natatorium.model.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

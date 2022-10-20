@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.PmsProductAttributeValue;
+import com.cc.natatorium.model.PmsProductAttributeValue;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

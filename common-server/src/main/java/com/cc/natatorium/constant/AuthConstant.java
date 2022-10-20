@@ -1,4 +1,4 @@
-package com.macro.mall.common.constant;
+package com.cc.natatorium.constant;
 
 /**
  * 权限相关常量定义

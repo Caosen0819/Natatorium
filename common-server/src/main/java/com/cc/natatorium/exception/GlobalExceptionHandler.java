@@ -1,6 +1,6 @@
-package com.macro.mall.common.exception;
+package com.cc.natatorium.exception;
 
-import com.macro.mall.common.api.CommonResult;
+import com.cc.natatorium.api.CommonResult;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;

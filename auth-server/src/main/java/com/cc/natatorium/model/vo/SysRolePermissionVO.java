@@ -1,6 +1,6 @@
-package cn.myjszl.oauth2.cloud.auth.server.model.vo;
+package com.cc.natatorium.model.vo;
 
-import cn.myjszl.oauth2.cloud.auth.server.model.po.SysRole;
+import com.cc.natatorium.model.po.UmsRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +23,5 @@ public class SysRolePermissionVO {
     //权限名称
     private String permissionName;
 
-    private List<SysRole> roles;
+    private List<UmsRole> roles;
 }

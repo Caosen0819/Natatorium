@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.dto.SmsFlashPromotionProduct;
+import com.cc.natatorium.dto.SmsFlashPromotionProduct;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

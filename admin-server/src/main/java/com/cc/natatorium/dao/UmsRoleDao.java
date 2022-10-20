@@ -1,7 +1,8 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.UmsMenu;
-import com.macro.mall.model.UmsResource;
+
+import com.cc.natatorium.model.UmsMenu;
+import com.cc.natatorium.model.UmsResource;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.macro.mall.common.api;
+package com.cc.natatorium.api;
 
 /**
  * 通用返回对象

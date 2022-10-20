@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.gateway.config.security;
+package com.cc.natatorium.config.security;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

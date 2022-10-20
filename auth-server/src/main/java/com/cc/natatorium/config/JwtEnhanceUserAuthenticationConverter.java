@@ -1,7 +1,7 @@
-package cn.myjszl.oauth2.cloud.auth.server.config;
+package com.cc.natatorium.config;
 
-import cn.myjszl.oauth2.cloud.auth.common.model.SecurityUser;
-import cn.myjszl.oauth2.cloud.auth.common.model.TokenConstant;
+import com.cc.natatorium.model.SecurityUser;
+import com.cc.natatorium.model.TokenConstant;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,7 +13,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @author 公众号：码猿技术专栏
+ * @author 公众号：caosen
  * 从map中提提取用户信息
  */
 public class JwtEnhanceUserAuthenticationConverter extends DefaultUserAuthenticationConverter {
@@ -26,6 +26,7 @@ public class JwtEnhanceUserAuthenticationConverter extends DefaultUserAuthentica
         if (map.containsKey(USERNAME)) {
             Collection<? extends GrantedAuthority> authorities = getAuthorities(map);
             String username = (String) map.get(USERNAME);
+            System.out.println("抽取用户信息");
             String userId = map.get(TokenConstant.USER_ID).toString();
             SecurityUser user =new SecurityUser(userId,username,"",authorities);
             return new UsernamePasswordAuthenticationToken(user, "", authorities);

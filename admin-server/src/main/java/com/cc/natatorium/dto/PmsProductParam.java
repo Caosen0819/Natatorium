@@ -1,6 +1,6 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.model.*;
+import com.cc.natatorium.model.*;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class PmsProductParam extends PmsProduct{
+public class PmsProductParam extends PmsProduct {
     @ApiModelProperty("商品阶梯价格设置")
     private List<PmsProductLadder> productLadderList;
     @ApiModelProperty("商品满减价格设置")

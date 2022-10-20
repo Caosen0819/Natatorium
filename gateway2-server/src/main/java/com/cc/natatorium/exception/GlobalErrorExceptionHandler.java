@@ -1,7 +1,8 @@
-package cn.myjszl.oauth2.cloud.gateway.exception;
+package com.cc.natatorium.exception;
 
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultCode;
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultMsg;
+
+import com.cc.natatorium.model.ResultCode;
+import com.cc.natatorium.model.ResultMsg;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.codehaus.jackson.map.ObjectMapper;

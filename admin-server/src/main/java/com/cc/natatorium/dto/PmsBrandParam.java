@@ -1,6 +1,6 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.validator.FlagValidator;
+import com.cc.natatorium.validator.FlagValidator;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

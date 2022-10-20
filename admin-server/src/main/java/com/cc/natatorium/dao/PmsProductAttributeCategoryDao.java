@@ -1,6 +1,7 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.dto.PmsProductAttributeCategoryItem;
+
+import com.cc.natatorium.dto.PmsProductAttributeCategoryItem;
 
 import java.util.List;
 

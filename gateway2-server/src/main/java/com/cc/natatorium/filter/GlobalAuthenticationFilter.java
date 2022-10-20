@@ -1,13 +1,11 @@
-package cn.myjszl.oauth2.cloud.gateway.filter;
+package com.cc.natatorium.filter;
 
 import cn.hutool.core.codec.Base64;
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultCode;
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultMsg;
-import cn.myjszl.oauth2.cloud.auth.common.model.SysConstant;
-import cn.myjszl.oauth2.cloud.auth.common.model.TokenConstant;
-import cn.myjszl.oauth2.cloud.gateway.model.SysParameterConfig;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.cc.natatorium.constant.AuthConstant;
+import com.cc.natatorium.model.*;
+import com.nimbusds.jose.JWSObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +24,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
 import java.nio.charset.StandardCharsets;
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
+
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 
 /**
  * @author 公众号：码猿技术专栏
@@ -67,15 +68,18 @@ public class GlobalAuthenticationFilter implements GlobalFilter, Ordered {
         String requestUrl = exchange.getRequest().getPath().value();
         //1、白名单放行，比如授权服务、静态资源.....
         if (checkUrls(sysConfig.getIgnoreUrls(),requestUrl)){
+            System.out.println("白名单");
             return chain.filter(exchange);
         }
 
         //2、 检查token是否存在
         String token = getToken(exchange);
         if (StringUtils.isBlank(token)) {
+            System.out.println("没有token");
             return invalidTokenMono(exchange);
         }
 
+        System.out.println("有token啊");
         //3 判断是否是有效的token
         OAuth2AccessToken oAuth2AccessToken;
         try {
@@ -105,12 +109,25 @@ public class GlobalAuthenticationFilter implements GlobalFilter, Ordered {
             //将解析后的token加密放入请求头中，方便下游微服务解析获取用户信息
             String base64 = Base64.encode(jsonObject.toJSONString());
             //放入请求头中
-            ServerHttpRequest tokenRequest = exchange.getRequest().mutate().header(TokenConstant.TOKEN_NAME, base64).build();
+            //从token中解析用户信息并设置到Header中去
+            String realToken = token.replace(AuthConstant.JWT_TOKEN_PREFIX, "");
+            JWSObject jwsObject = JWSObject.parse(realToken);
+            String userStr = jwsObject.getPayload().toString();
+            LOGGER.info("AuthGlobalFilter.filter() user:{}");
+
+            ServerHttpRequest tokenRequest =
+                    exchange.getRequest().mutate().header(TokenConstant.TOKEN_NAME, base64)
+                                    .header(AuthConstant.USER_TOKEN_HEADER, userStr).build();
             ServerWebExchange build = exchange.mutate().request(tokenRequest).build();
             return chain.filter(build);
+
+
         } catch (InvalidTokenException e) {
             //解析token异常，直接返回token无效
+            System.out.println("token无效");
             return invalidTokenMono(exchange);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
 
 

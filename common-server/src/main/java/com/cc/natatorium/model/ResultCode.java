@@ -1,9 +1,6 @@
-package cn.myjszl.oauth2.cloud.auth.common.model;
+package com.cc.natatorium.model;
 
-/**
- * @author 公众号：码猿技术专栏
- * 响应码、提示信息
- */
+
 public enum ResultCode {
 
     CLIENT_AUTHENTICATION_FAILED(1001,"客户端认证失败"),

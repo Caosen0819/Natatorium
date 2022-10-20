@@ -1,4 +1,4 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

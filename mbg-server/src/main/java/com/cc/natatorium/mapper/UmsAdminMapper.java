@@ -2,9 +2,13 @@ package com.cc.natatorium.mapper;
 
 import com.cc.natatorium.model.UmsAdmin;
 import com.cc.natatorium.model.UmsAdminExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+/**
+ * @author csen
+ */
 public interface UmsAdminMapper {
     long countByExample(UmsAdminExample example);
 

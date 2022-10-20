@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.PmsProductVertifyRecord;
+import com.cc.natatorium.model.PmsProductVertifyRecord;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

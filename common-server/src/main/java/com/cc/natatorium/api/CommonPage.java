@@ -1,4 +1,4 @@
-package com.macro.mall.common.api;
+package com.cc.natatorium.api;
 
 import com.github.pagehelper.PageInfo;
 import org.springframework.data.domain.Page;

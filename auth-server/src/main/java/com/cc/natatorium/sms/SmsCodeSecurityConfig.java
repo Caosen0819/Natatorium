@@ -1,6 +1,6 @@
-package cn.myjszl.oauth2.cloud.auth.server.sms;
+package com.cc.natatorium.sms;
 
-import cn.myjszl.oauth2.cloud.auth.server.sms.service.SmsCodeUserDetailService;
+import com.cc.natatorium.sms.service.SmsCodeUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

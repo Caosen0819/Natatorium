@@ -1,10 +1,9 @@
-package cn.myjszl.oauth2.cloud.gateway.config.security;
+package com.cc.natatorium.config.security;
 
 import cn.hutool.core.util.ArrayUtil;
-import cn.myjszl.oauth2.cloud.gateway.exception.RequestAccessDeniedHandler;
-import cn.myjszl.oauth2.cloud.gateway.exception.RequestAuthenticationEntryPoint;
-import cn.myjszl.oauth2.cloud.gateway.filter.CorsFilter;
-import cn.myjszl.oauth2.cloud.gateway.model.SysParameterConfig;
+import com.cc.natatorium.exception.RequestAccessDeniedHandler;
+import com.cc.natatorium.exception.RequestAuthenticationEntryPoint;
+import com.cc.natatorium.model.SysParameterConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -57,8 +56,8 @@ public class SecurityConfig {
     @Autowired
     private ReactiveAuthenticationManager tokenAuthenticationManager;
 
-    @Autowired
-    private CorsFilter corsFilter;
+//    @Autowired
+//    private CorsFilter corsFilter;
 
     @Bean
         SecurityWebFilterChain webFluxSecurityFilterChain(ServerHttpSecurity http) throws Exception{
@@ -81,7 +80,7 @@ public class SecurityConfig {
                 .accessDeniedHandler(requestAccessDeniedHandler)
                 .and()
                 // 跨域过滤器
-                .addFilterAt(corsFilter, SecurityWebFiltersOrder.CORS)
+                //.addFilterAt(corsFilter, SecurityWebFiltersOrder.CORS)
                 //token的认证过滤器，用于校验token和认证
                 .addFilterAt(authenticationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION);
         return http.build();

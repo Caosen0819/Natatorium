@@ -1,16 +1,19 @@
-package cn.myjszl.oauth.server.exception;
+package com.cc.natatorium.exception;
 
-import cn.myjszl.oauth.server.model.ResultCode;
-import cn.myjszl.oauth.server.model.ResultMsg;
+
+import com.cc.natatorium.model.ResultCode;
+import com.cc.natatorium.model.ResultMsg;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
 import org.springframework.security.oauth2.common.exceptions.UnsupportedGrantTypeException;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 
+
 /**
- * @author 公众号：码猿技术专栏
- * 自定义异常翻译器，针对用户名、密码异常，授权类型不支持的异常进行处理
+ * @Author caosen
+ * @data 2022/10/7--13:15
+ * 异常翻译器，根据传递过来的Exception判断不同的异常返回特定的信息
  */
 @SuppressWarnings("ALL")
 public class OAuthServerWebResponseExceptionTranslator implements WebResponseExceptionTranslator{

@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.auth.common.model;
+package com.cc.natatorium.model;
 
 /**
  * 系统常量

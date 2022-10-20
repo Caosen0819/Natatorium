@@ -1,6 +1,6 @@
-package cn.myjszl.oauth.server.utils;
+package com.cc.natatorium.utils;
 
-import cn.myjszl.oauth.server.model.ResultMsg;
+import com.cc.natatorium.model.ResultMsg;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletOutputStream;

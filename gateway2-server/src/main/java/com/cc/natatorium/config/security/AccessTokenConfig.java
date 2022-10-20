@@ -1,7 +1,8 @@
-package cn.myjszl.oauth2.cloud.gateway.config.security;
+package com.cc.natatorium.config.security;
 
-import cn.myjszl.oauth2.cloud.auth.common.model.SecurityUser;
-import cn.myjszl.oauth2.cloud.auth.common.model.TokenConstant;
+
+import com.cc.natatorium.model.SecurityUser;
+import com.cc.natatorium.model.TokenConstant;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;

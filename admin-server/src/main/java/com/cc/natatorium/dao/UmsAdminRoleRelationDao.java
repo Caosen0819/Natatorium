@@ -1,8 +1,9 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.model.UmsAdminRoleRelation;
-import com.macro.mall.model.UmsResource;
-import com.macro.mall.model.UmsRole;
+
+import com.cc.natatorium.model.UmsAdminRoleRelation;
+import com.cc.natatorium.model.UmsResource;
+import com.cc.natatorium.model.UmsRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

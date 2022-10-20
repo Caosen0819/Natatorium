@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.dto.SmsCouponParam;
+import com.cc.natatorium.dto.SmsCouponParam;
 import org.apache.ibatis.annotations.Param;
 
 /**

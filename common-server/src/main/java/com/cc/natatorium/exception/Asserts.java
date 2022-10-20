@@ -1,6 +1,7 @@
-package com.macro.mall.common.exception;
+package com.cc.natatorium.exception;
 
-import com.macro.mall.common.api.IErrorCode;
+
+import com.cc.natatorium.api.IErrorCode;
 
 /**
  * 断言处理类，用于抛出各种API异常

@@ -1,8 +1,9 @@
-package cn.myjszl.oauth.server.model;
+package com.cc.natatorium.model;
+
 
 /**
- * @author 公众号：码猿技术专栏
- * 响应码、提示信息
+ * @Author caosen
+ * @data 2022/10/7--13:15
  */
 public enum ResultCode {
 

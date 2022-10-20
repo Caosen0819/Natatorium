@@ -1,4 +1,4 @@
-package cn.myjszl.oauth2.cloud.gateway.model;
+package com.cc.natatorium.model;
 
 
 import lombok.Data;

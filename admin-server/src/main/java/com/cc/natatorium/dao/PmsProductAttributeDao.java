@@ -1,6 +1,6 @@
-package com.macro.mall.dao;
+package com.cc.natatorium.dao;
 
-import com.macro.mall.dto.ProductAttrInfo;
+import com.cc.natatorium.dto.ProductAttrInfo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

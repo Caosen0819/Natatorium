@@ -1,13 +1,16 @@
-package cn.myjszl.oauth2.cloud.auth.server.dao;
+package com.cc.natatorium.dao;
 
-import cn.myjszl.oauth2.cloud.auth.server.model.po.SysUser;
+import com.cc.natatorium.model.po.UmsAdmin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+/**
+ * @author csen
+ */
 @Repository
-public interface SysUserRepository extends JpaRepository<SysUser,Long> {
-    SysUser findByUsernameAndStatus(String username,Integer status);
+public interface SysUserRepository extends JpaRepository<UmsAdmin,Long> {
+    UmsAdmin findByUsernameAndStatus(String username,Integer status);
 
-    SysUser findByMobileAndStatus(String mobile,Integer status);
+    UmsAdmin findByMobileAndStatus(String mobile,Integer status);
 
 }

@@ -1,8 +1,9 @@
-package com.macro.mall.dto;
+package com.cc.natatorium.dto;
 
-import com.macro.mall.model.SmsCoupon;
-import com.macro.mall.model.SmsCouponProductCategoryRelation;
-import com.macro.mall.model.SmsCouponProductRelation;
+
+import com.cc.natatorium.model.SmsCoupon;
+import com.cc.natatorium.model.SmsCouponProductCategoryRelation;
+import com.cc.natatorium.model.SmsCouponProductRelation;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

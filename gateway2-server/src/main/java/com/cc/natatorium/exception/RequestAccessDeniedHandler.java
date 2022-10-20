@@ -1,8 +1,8 @@
-package cn.myjszl.oauth2.cloud.gateway.exception;
+package com.cc.natatorium.exception;
 
 import cn.hutool.json.JSONUtil;
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultCode;
-import cn.myjszl.oauth2.cloud.auth.common.model.ResultMsg;
+import com.cc.natatorium.model.ResultCode;
+import com.cc.natatorium.model.ResultMsg;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
